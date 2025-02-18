@@ -1,23 +1,23 @@
-/* General Reset */
+/* 🌍 Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #0d1117;
-    color: #c9d1d9;
+    background: #f4f4f4;
+    color: #333;
     line-height: 1.6;
+    text-align: center;
 }
 
-/* Header Styling */
+/* 🎨 Header & Navigation */
 .header {
-    text-align: center;
-    padding: 20px;
-    background-color: #131010;
-    position: relative;
+    background: #222;
+    color: #fff;
+    padding: 20px 0;
 }
 
 /* Profile Image at the Top */
@@ -35,96 +35,91 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Styling */
+
 nav ul {
     list-style: none;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 10px;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    color: #ebe2e2;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: 0.3s;
 }
 
-/* About Me Section */
-.about-text {
-    text-align: justify;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+nav ul li a:hover {
+    background: #ff9800;
+    border-radius: 5px;
 }
 
+/* 📌 Responsive Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
 
-/* Sections */
+    nav ul li {
+        margin: 5px 0;
+    }
+}
 
+/* 📌 About Section */
 .about-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #58a6ff;
-    box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+/* 🛠️ Skills Section */
+#skills {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-text {
-    flex: 1;
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #58a6ff;
-    margin-bottom: 20px;
-}
-/*skills animation*/
 #skills-list {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    display: none;
+    list-style: none;
+    text-align: left;
+    padding: 0;
 }
 
-#skills:hover #skills-list {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+#skills-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
 }
 
-
-/* Projects */
+/* 🖥️ Projects Grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    text-align: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .project-card {
-    background: #161b22;
+    background: #fff;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(88, 166, 255, 0.2);
-    transition: transform 0.3s;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .project-card:hover {
@@ -132,113 +127,88 @@ h2 {
 }
 
 .project-card img {
-    max-width: 100%;
-    border-radius: 8px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
 }
 
 .project-card a {
     display: inline-block;
+    padding: 8px 12px;
     margin-top: 10px;
-    color: #58a6ff;
+    color: #fff;
+    background: #ff9800;
     text-decoration: none;
-    font-weight: bold;
-}
-/* Certifications Section */
-#certifications {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #071d33;
+    border-radius: 5px;
 }
 
-.certifications-container {
+.project-card a:hover {
+    background: #e68900;
+}
+
+/* 🏆 Certifications */
+.certifications-list {
+    list-style: none;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certifications-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 📩 Contact Section */
+.contact-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.cert-card {
-    width: 250px;
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover Effect */
-.cert-card:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow */
-}
-
-.cert-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: opacity 0.3s ease;
-}
-
-.cert-card:hover img {
-    opacity: 0.9; /* Slight fade effect when hovered */
-}
-
-.cert-card p {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-/* Contact Section */
-#contact {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #0d1117;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    gap: 15px;
+    padding: 20px;
 }
 
 .contact-link {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    font-weight: bold;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
     text-decoration: none;
-    color: #f0e6e6;
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #333;
+    transition: 0.3s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact-link img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s ease;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
-/* Hover Effects */
 .contact-link:hover {
-    transform: scale(1.1);
-    color: #0073b1; /* LinkedIn blue */
+    background: #ff9800;
+    color: #fff;
 }
 
-.contact-link:hover img {
-    transform: scale(1.2);
+/* 📌 Responsive Contact */
+@media (max-width: 600px) {
+    .contact-container {
+        flex-direction: column;
+    }
 }
 
+/* 🏁 Footer */
 footer {
-    text-align: center;
+    background: #222;
+    color: #fff;
     padding: 10px;
-    background-color: #0f0f0f;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
 }
-
