@@ -1,119 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header class="header">
-        <div class="profile-container">
-            <img src="images/pp.jpeg" alt="Your Name" class="profile-photo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CyberSec Pro | IT Security & Network Solutions</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  primary: '#1e40af',
+                  secondary: '#1e3a8a',
+                  accent: '#3b82f6',
+                  dark: '#0f172a',
+                },
+                fontFamily: {
+                  sans: ['Inter', 'sans-serif'],
+                  mono: ['Fira Code', 'monospace'],
+                },
+              }
+            }
+          }
+        </script>
+      </head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Header with Navigation -->
+    <header class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-8 px-4 md:px-12 lg:px-24">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+                <div class="profile-photo-container">
+                    <img src="images/pp.jpeg" alt="Sirjan Pun Magar" class="profile-photo w-24 h-24 rounded-full object-cover animate-fade-in">
+                </div>
+                <h1 class="text-3xl font-bold tracking-tight animate-fade-in delay-100">Sirjan Pun Magar</h1>
+            </div>
+            
+            <nav class="mt-6 md:mt-0 animate-fade-in delay-200">
+                <ul class="flex flex-wrap justify-center space-x-1 md:space-x-4">
+                    <li><a href="#about" class="nav-link px-3 py-2 rounded-md hover:bg-blue-700 transition">About</a></li>
+                    <li><a href="#skills" class="nav-link px-3 py-2 rounded-md hover:bg-blue-700 transition">Skills</a></li>
+                    <li><a href="#projects" class="nav-link px-3 py-2 rounded-md hover:bg-blue-700 transition">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link px-3 py-2 rounded-md hover:bg-blue-700 transition">Certifications</a></li>
+                    <li><a href="https://medium.com/@kc.raqj58" class="nav-link px-3 py-2 rounded-md hover:bg-blue-700 transition">Blog</a></li>
+                    <li><a href="#contact" class="nav-link px-3 py-2 rounded-md hover:bg-blue-700 transition">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <h1>SIRJAN PUN MAGAR</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="https://medium.com/@kc.raqj58">Blogs and Articles</a></li>
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-        </nav>
     </header>
-    
 
-    <section id="about">
-        <div class="about-container">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    I am an IT Technician with a strong background in technical support, system administration, and endpoint security. I specialize in troubleshooting hardware and software issues, managing enterprise IT infrastructure, and providing end-user support to ensure seamless operations. My experience includes configuring and maintaining desktop systems, network devices, and ticketing systems while implementing security best practices to protect endpoints from threats. With a solid understanding of cybersecurity principles, I focus on securing IT environments through vulnerability management, access controls, and proactive threat mitigation. A fast learner with a problem-solving approach, I am committed to delivering efficient and secure IT solutions.
-                </p>
-            </div>
-        </div>
-    </section>
-    
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul id="skills-list">
-            <li><strong>Operating Systems:</strong> Windows, macOS, Linux</li>
-            <li><strong>Hardware & Software Troubleshooting</strong></li>
-            <li><strong>Networking:</strong> TCP/IP, DNS, DHCP, VLANs</li>
-            <li><strong>Active Directory & User Management</strong></li>
-            <li><strong>IT Support Tools:</strong> Remote Desktop, Ticketing Systems</li>
-            <li><strong>Microsoft 365 & Google Workspace</strong></li>
-            <li><strong>Cybersecurity:</strong> Endpoint Security, MFA, Phishing Prevention</li>
-            <li><strong>Backup & Recovery Solutions</strong></li>
-            <li><strong>Customer Service & Communication</strong></li>
-        </ul>
-    </section>
-    
-    
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="images/active.png" alt="Active Directory">
-                <h3>Active Directory</h3>
-                <a href="projects/ActiveD/index.html">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/microsoft.jpeg" alt="Microsoft 365">
-                <h3>microsoft365</h3>
-                <a href="projects/microsoft365/index.html">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/ticketing.png" alt="Ticketing system">
-                <h3>Ticketing system</h3>
-                <a href="projects/Ticketing/index.html">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/cybersecurity.jpg" alt="Cybersecurity projects">
-                <h3>Cybersecurity</h3>
-                <a href="projects/cybersecurity/index.html">View Project</a>
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 md:px-12 lg:px-24 bg-white">
+        <div class="container mx-auto animate-fade-in">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center text-blue-800">About Me</h2>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <p class="text-lg leading-relaxed mb-6">
+                        I am an IT Technician with a strong background in technical support, system administration, and endpoint security. I specialize in troubleshooting hardware and software issues, managing enterprise IT infrastructure, and providing end-user support to ensure seamless operations.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        My experience includes configuring and maintaining desktop systems, network devices, and ticketing systems while implementing security best practices to protect endpoints from threats. With a solid understanding of cybersecurity principles, I focus on securing IT environments through vulnerability management, access controls, and proactive threat mitigation.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        A fast learner with a problem-solving approach, I am committed to delivering efficient and secure IT solutions.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="certifications">
-        <h2>Certifications & Training</h2>
-        <ul class="certifications-list">
-            <li>CompTIA Security+ (SY0-701) certified</li>
-            <li>CompTIA Network+ Certification, In progress, 3/2025</li>
-            <li>Hardware and Networking Training (08/2021 – 11/2021) </li>
-            <li>Full Stack Java Training Course (12/2020 – 03/2021)</li>
-        </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 md:px-12 lg:px-24 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-800 animate-fade-in">Technical Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Skill Category 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md animate-fade-in delay-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-desktop text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Systems & Infrastructure</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Windows, macOS, Linux Administration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Hardware & Software Troubleshooting</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Active Directory & User Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Backup & Recovery Solutions</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 2 - Enhanced Cybersecurity Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-md animate-fade-in delay-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-shield-alt text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Cybersecurity & Networking</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Network Packet Analysis (Wireshark, tcpdump)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>SIEM Tools (Splunk, ELK Stack)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Vulnerability Scanning (Nessus, OpenVAS)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Network Scanning (Nmap, Netcat)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>TCP/IP, DNS, DHCP, VLANs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Endpoint Security & MFA</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md animate-fade-in delay-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-tools text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">IT Support Tools</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Microsoft 365 & Google Workspace</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Remote Desktop Solutions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Ticketing Systems (ServiceNow, Jira)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Documentation & Knowledge Bases</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md animate-fade-in delay-400">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-teal-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-users text-teal-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Soft Skills</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Customer Service Excellence</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Technical Communication</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Problem-Solving</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Team Collaboration</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-container">
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/sirjan-pun-magar/" target="_blank" class="contact-link">
-                <img src="images/linkedin.png" alt="LinkedIn"> LinkedIn
-            </a>
-    
-            <!-- Email -->
-            <a href="mailto:punsirjan10@gmail.com" class="contact-link">
-                <img src="images/email.png" alt="Email"> punsirjan10@gmail.com
-            </a>
-            <!-- GitHub -->
-        <a href="https://github.com/nepsecurity" target="_blank" class="contact-link">
-            <img src="images/github.png" alt="GitHub"> GitHub
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 md:px-12 lg:px-24 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-800 animate-fade-in">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition animate-fade-in delay-100">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-server text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Active Directory Management</h3>
+                        <p class="text-gray-600 mb-4">Implemented and managed enterprise AD infrastructure with group policies and security controls.</p>
+                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+              <!-- Cloud Projects Card -->
+<div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition animate-fade-in delay-200">
+    <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+        <i class="fas fa-cloud text-white text-6xl"></i>
+    </div>
+    <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">Cloud Infrastructure Projects</h3>
+        <p class="text-gray-600 mb-4">Designed and deployed cloud solutions across AWS, Azure, and GCP including virtual networks, storage, and compute services.</p>
+        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+            View Details <i class="fas fa-arrow-right ml-2"></i>
         </a>
+    </div>
+</div>
+                 <!-- Project 3 -->
+                 <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition animate-fade-in delay-200">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fab fa-microsoft text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Microsoft 365 Deployment</h3>
+                        <p class="text-gray-600 mb-4">Migrated organization to M365 with security configurations and user training.</p>
+                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+              <!-- Linux Projects Card -->
+<div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition animate-fade-in delay-300">
+    <div class="h-48 bg-gradient-to-r from-yellow-500 to-orange-600 flex items-center justify-center">
+        <i class="fab fa-linux text-white text-7xl"></i>
+    </div>
+    <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">Linux System Projects</h3>
+        <p class="text-gray-600 mb-4">Designed and deployed enterprise Linux solutions including server configuration, Bash scripting, security hardening, and containerization.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">Ubuntu</span>
+            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">CentOS</span>
+            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">Bash</span>
+            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">Docker</span>
+        </div>
+        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+            View Details <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</div>
+             <!-- Wireshark Networking Project Card -->
+<div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition animate-fade-in delay-400">
+    <div class="h-48 bg-gradient-to-r from-indigo-600 to-blue-800 flex items-center justify-center">
+        <i class="fas fa-network-wired text-white text-7xl"></i>
+    </div>
+    <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">Wireshark Network Analysis</h3>
+        <p class="text-gray-600 mb-4">Performed deep packet inspection, network troubleshooting, and security analysis using Wireshark across enterprise environments.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">Packet Capture</span>
+            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">TCP/UDP</span>
+            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">Traffic Analysis</span>
+            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">Security Audits</span>
+        </div>
+        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+            View Details <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</div>
+                <!-- Project 4-->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition animate-fade-in delay-300">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-ticket-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ticketing System Implementation</h3>
+                        <p class="text-gray-600 mb-4">Deployed IT service management platform with automation and SLA tracking.</p>
+                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 - Enhanced Cybersecurity Project -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition animate-fade-in delay-400">
+                    <div class="h-48 bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cybersecurity Initiatives</h3>
+                        <p class="text-gray-600 mb-4">Implemented endpoint protection, MFA, security awareness training, and vulnerability management using Nessus and Nmap.</p>
+                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    
 
-    <footer>
-        <p>&copy; 2025 Sirjan Pun Magar. All rights reserved.</p>
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 px-4 md:px-12 lg:px-24 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-800 animate-fade-in">Certifications & Training</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- Certification 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-start animate-fade-in delay-100">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">CompTIA Security+ (SY0-701)</h3>
+                        <p class="text-gray-600">Certified in cybersecurity principles, risk management, and threat mitigation.</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-1"></i>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-start animate-fade-in delay-200">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-spinner text-indigo-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">CompTIA Network+ Certification</h3>
+                        <p class="text-gray-600">In progress, expected completion March 2025.</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-1"></i>
+                            <span>Expected March 2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-start animate-fade-in delay-300">
+                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-laptop-code text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">Hardware and Networking Training</h3>
+                        <p class="text-gray-600">Comprehensive training in computer hardware and network infrastructure.</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-1"></i>
+                            <span>August 2021 - November 2021</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-start animate-fade-in delay-400">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-code text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">Full Stack Java Training Course</h3>
+                        <p class="text-gray-600">Training in Java programming and full-stack development concepts.</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-1"></i>
+                            <span>December 2020 - March 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 md:px-12 lg:px-24 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-800 animate-fade-in">Get In Touch</h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Email -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center animate-fade-in delay-100 hover:shadow-lg transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="text-gray-600 mb-4">Direct message for professional inquiries</p>
+                    <a href="mailto:punsirjan10@gmail.com" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition">
+                        <i class="fas fa-paper-plane mr-2"></i> Send Email
+                    </a>
+                </div>
+                
+                <!-- LinkedIn -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center animate-fade-in delay-200 hover:shadow-lg transition">
+                    <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-linkedin-in text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+                    <p class="text-gray-600 mb-4">Connect for professional networking</p>
+                    <a href="https://www.linkedin.com/in/sirjan-pun-magar/" target="_blank" class="inline-block bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded-full transition">
+                        <i class="fab fa-linkedin-in mr-2"></i> View Profile
+                    </a>
+                </div>
+                
+                <!-- GitHub -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center animate-fade-in delay-300 hover:shadow-lg transition">
+                    <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-github text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">GitHub</h3>
+                    <p class="text-gray-600 mb-4">Explore my technical projects</p>
+                    <a href="https://github.com/nepsecurity" target="_blank" class="inline-block bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded-full transition">
+                        <i class="fab fa-github mr-2"></i> Visit GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Sirjan Pun Magar. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/sirjan-pun-magar/" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/nepsecurity" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://medium.com/@kc.raqj58" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-medium text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full hidden items-center justify-center transition-all hover:bg-blue-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
